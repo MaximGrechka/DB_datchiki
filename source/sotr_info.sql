@@ -1,6 +1,7 @@
-DROP TABLE IF EXISTS sotr_info; 
-CREATE TABLE sotr_info
+DROP TABLE IF EXISTS employees_info;
+CREATE TABLE employees_info
 (
-id_sot serial primary key, 
-fio varchar,
+    id_employee serial PRIMARY KEY,
+    first_name varchar NOT NULL,
+    second_name varchar NOT NULL
 );

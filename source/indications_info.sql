@@ -1,7 +1,8 @@
-DROP TABLE IF EXISTS indication_info; 
-CREATE TABLE indication_info
+DROP TABLE IF EXISTS measure_info;
+CREATE TABLE measure_info
 (
-indication double,
-sos boolean, 
-id_sensor integer,
+    id_sensor integer NOT NULL,
+    received_timestamp timestamp NOT NULL,
+    measure double NOT NULL,
+    sos boolean DEFAULT false
 );
