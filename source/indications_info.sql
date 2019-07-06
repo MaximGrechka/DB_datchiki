@@ -10,4 +10,5 @@ CREATE TABLE measure_info
     CONSTRAINT MI_id_sensor_fkey FOREIGN KEY (id_sensor)
         REFERENCES sensor_instances_info (id_sensor) MATCH SIMPLE
         ON UPDATE NO ACTION ON DELETE NO ACTION
+        
 );
