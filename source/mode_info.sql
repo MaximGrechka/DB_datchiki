@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS mode_info;
-CREATE TABLE mode_info
+DROP TABLE IF EXISTS modes_info;
+CREATE TABLE modes_info
 (
     id_mode serial PRIMARY KEY,
     name varchar,

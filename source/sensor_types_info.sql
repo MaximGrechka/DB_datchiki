@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS sensors_info;
-CREATE TABLE sensors_info
+DROP TABLE IF EXISTS sensor_types_info;
+CREATE TABLE sensor_types_info
 (
     id_type serial PRIMARY KEY,
     name varchar,
