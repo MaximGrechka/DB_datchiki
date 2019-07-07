@@ -11,7 +11,7 @@ CREATE TABLE  sensor_instances_info
 
     CONSTRAINT GEO FOREIGN KEY (id_location)
         REFERENCES locations_info (id_location) MATCH SIMPLE
-        ON UPDATE NO ACTION ON DELETE NO ACTION,
+        ON UPDATE NO ACTION ON DELETE NO ACTION,
 
     CONSTRAINT MODE FOREIGN KEY (id_mode)
         REFERENCES modes_info (id_mode) MATCH SIMPLE
