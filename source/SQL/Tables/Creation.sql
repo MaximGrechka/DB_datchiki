@@ -27,6 +27,7 @@ CREATE TABLE sensor_types
     id_type serial PRIMARY KEY,
     name varchar,
     description varchar,
+    lifespan interval NOT NULL,
     measurement_error float
 );
 
@@ -43,11 +44,10 @@ CREATE TABLE  sensor_instances
 (
     id_sensor serial PRIMARY KEY,
     setup_timestamp timestamp NOT NULL,
-    lifespan interval NOT NULL,
-    id_location integer NOT NULL,
-    id_mode integer NOT NULL,
-    id_employee integer NOT NULL,
     id_type integer NOT NULL,
+    id_mode integer NOT NULL,
+    id_location integer NOT NULL,
+    id_employee integer NOT NULL,
 
     CONSTRAINT sensor_instances_id_location_fkey FOREIGN KEY (id_location)
         REFERENCES locations (id_location) MATCH SIMPLE
