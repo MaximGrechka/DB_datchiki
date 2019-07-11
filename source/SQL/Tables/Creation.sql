@@ -50,19 +50,19 @@ CREATE TABLE  sensor_instances
     id_type integer NOT NULL,
 
     CONSTRAINT sensor_instances_id_location_fkey FOREIGN KEY (id_location)
-        REFERENCES locations_info (id_location) MATCH SIMPLE
+        REFERENCES locations (id_location) MATCH SIMPLE
         ON UPDATE NO ACTION ON DELETE NO ACTION,
 
     CONSTRAINT sensor_instances_id_mode_fkey FOREIGN KEY (id_mode)
-        REFERENCES modes_info (id_mode) MATCH SIMPLE
+        REFERENCES sensor_modes (id_mode) MATCH SIMPLE
         ON UPDATE NO ACTION ON DELETE NO ACTION,
 
-    CONSTRAINT sensor_instances_id_employee_fkey KEY (id_employee)
-        REFERENCES employees_info (id_employee) MATCH SIMPLE
+    CONSTRAINT sensor_instances_id_employee_fkey FOREIGN KEY (id_employee)
+        REFERENCES employees (id_employee) MATCH SIMPLE
         ON UPDATE NO ACTION ON DELETE NO ACTION,
 
     CONSTRAINT sensor_instances_id_type_fkey FOREIGN KEY (id_type)
-        REFERENCES sensor_types_info (id_type) MATCH SIMPLE
+        REFERENCES sensor_types (id_type) MATCH SIMPLE
         ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
