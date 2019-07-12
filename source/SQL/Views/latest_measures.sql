@@ -3,7 +3,7 @@ DROP VIEW IF EXISTS latest_measures;
 CREATE VIEW latest_measures AS
 (
     SELECT
-        setup_timestamp,
+        receival_timestamp,
         measured_value,
         id_sensor
 

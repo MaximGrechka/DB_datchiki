@@ -1,0 +1,31 @@
+/* Класс таблицы с данными, полученными из SQL-запроса. */
+.output_table
+{
+    border: 1px solid black;
+    width: 800px;
+}
+
+/* Строки таблицы. */
+tr
+{
+    border: 1px solid black;
+}
+
+/* Столбцы таблицы. */
+th
+{
+    text-align: center;
+}
+
+/* Ячейки таблицы */
+td
+{
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* При наведении курсора на строку таблицы */
+tr:hover
+{
+    background-color: #c0c0c0;
+}
