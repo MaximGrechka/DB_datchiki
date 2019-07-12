@@ -1,8 +1,37 @@
+/* ОСНОВНОЙ БЛОК */
+.main_div
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+/* ЛОГОТИП */
+/* Блок логотипа. */
+.logo_div
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/* ОПИСАНИЕ ТАБЛИЦЫ */
+.table_description_div
+{
+    margin: 0 auto;
+}
+
+
+
+/* ТАБЛИЦА */
 /* Класс таблицы с данными, полученными из SQL-запроса. */
 .output_table
 {
     border: 1px solid black;
-    width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* Строки таблицы. */
@@ -14,6 +43,7 @@ tr
 /* Столбцы таблицы. */
 th
 {
+    border: 1px solid black;
     text-align: center;
 }
 
@@ -25,7 +55,8 @@ td
 }
 
 /* При наведении курсора на строку таблицы */
-tr:hover
+.output_table tr:hover
 {
-    background-color: #c0c0c0;
+    background-color: #0a8a93;
+    color: #ffffff;
 }

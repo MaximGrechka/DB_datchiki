@@ -1,6 +1,6 @@
 <?php
     // Соединение, выбор базы данных
-    $dbconn = pg_connect("host=localhost dbname=sensors_data user=sd_admin password=%DB_SIRIUS%")
+    $dbconn = pg_connect("host=localhost dbname=sensors_data user=web_reader password=web_reader_p")
         or die('Не удалось соединиться: ' . pg_last_error());
 
     // Выполнение SQL-запроса
