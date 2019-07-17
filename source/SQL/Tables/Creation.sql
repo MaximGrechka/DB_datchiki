@@ -18,7 +18,9 @@ CREATE TABLE employees
 CREATE TABLE locations
 (
     id_location serial PRIMARY KEY,
-    description varchar NOT NULL
+    description varchar NOT NULL,
+    min_value float,
+    max_value float
 );
 
 -- Таблица типов сенсоров.
@@ -42,7 +44,7 @@ CREATE TABLE sensor_modes
 -- Таблица экземпляров сенсоров.
 CREATE TABLE  sensor_instances
 (
-    id_sensor serial PRIMARY KEY,
+    id_sensor integer PRIMARY KEY,
     setup_timestamp timestamp NOT NULL,
     id_type integer NOT NULL,
     id_mode integer NOT NULL,
@@ -78,4 +80,15 @@ CREATE TABLE measures
     CONSTRAINT measures_id_sensor_fkey FOREIGN KEY (id_sensor)
         REFERENCES sensor_instances (id_sensor) MATCH SIMPLE
         ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+
+
+
+DROP TABLE IF EXISTS column_names;
+
+-- Таблица названий колонок.
+CREATE TABLE column_names
+(
+    name varchar UNIQUE NOT NULL,
+    description varchar
 );
